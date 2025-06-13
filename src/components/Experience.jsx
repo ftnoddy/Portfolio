@@ -224,13 +224,13 @@ const Experience = () => {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-lg">B.Tech in Computer Science</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">National Institute of Technology</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">2017 – 2021 | CGPA: 8.5/10</div>
+                  <div className="font-semibold text-lg">B.Tech in Electronics & Communication Engineering</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">Netaji Subhash Engineering College</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">07/2019 – 07/2023 | CGPA: 8.17/10</div>
                 </div>
               </div>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Specialized in Data Structures, Algorithms, Database Management, and Software Engineering.
+                Specialized in Electronics & Communication Engineering with focus on digital systems, signal processing, and communication technologies.
               </p>
             </div>
             
@@ -240,13 +240,13 @@ const Experience = () => {
                   <Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <div className="font-semibold text-lg">AWS Certified Developer</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">Amazon Web Services</div>
-                  <div className="text-sm text-slate-500 dark:text-slate-400">2023 | Associate Level</div>
+                  <div className="font-semibold text-lg">Full Stack Web Development Bootcamp</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">Udemy - Dr. Angela Yu</div>
+                  <div className="text-sm text-slate-500 dark:text-slate-400">Complete Web Development Course</div>
                 </div>
               </div>
               <p className="text-sm text-slate-600 dark:text-slate-400">
-                Certified in developing and maintaining applications on the AWS platform.
+                Comprehensive full-stack development course covering HTML, CSS, JavaScript, Node.js, React, MongoDB, and modern web technologies.
               </p>
             </div>
           </div>
