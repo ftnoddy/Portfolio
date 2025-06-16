@@ -71,13 +71,13 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 mb-6">
-            <a 
-              href="#" 
+            <button 
+              onClick={downloadResume}
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
             >
               <FileText className="w-5 h-5 group-hover:rotate-12 transition-transform" /> 
               Download Resume
-            </a>
+            </button>
             <button 
               onClick={scrollToContact}
               className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-white font-semibold transition-all duration-300 transform hover:scale-105"

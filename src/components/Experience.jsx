@@ -39,7 +39,7 @@ const Experience = () => {
         'Leading MERN stack development for recruitment platforms',
         'Optimizing APIs for high-traffic applications'
       ],
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'React', 'AI Integration'],
+      technologies: ['TypeScript', 'AWS', 'MongoDB', 'Node.js', 'Express.js'],
       teamSize: '6',
       projects: '2'
     },

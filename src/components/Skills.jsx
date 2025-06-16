@@ -32,8 +32,9 @@ const Skills = () => {
     { name: 'GraphQL', icon: Layers, experience: '1.5 yrs', level: 70, color: 'from-pink-400 to-pink-600' },
     { name: 'Git & GitHub', icon: GitBranch, experience: '4+ yrs', level: 90, color: 'from-orange-400 to-orange-600' },
     { name: 'AWS Cloud', icon: Cloud, experience: '2+ yrs', level: 80, color: 'from-yellow-400 to-yellow-600' },
-    { name: 'Docker', icon: Box, experience: '2 yrs', level: 75, color: 'from-blue-500 to-blue-700' },
-    { name: 'Redis', icon: Zap, experience: '1.5 yrs', level: 70, color: 'from-red-400 to-red-600' },
+    { name: 'React', icon: Globe, experience: '2+ yrs', level: 85, color: 'from-blue-400 to-blue-600' },
+    { name: 'Redux', icon: Layers, experience: '1.5 yrs', level: 75, color: 'from-purple-500 to-purple-700' },
+    // { name: 'Redis', icon: Zap, experience: '1.5 yrs', level: 70, color: 'from-red-400 to-red-600' },
     { name: 'TypeScript', icon: Code, experience: '2 yrs', level: 80, color: 'from-blue-600 to-blue-800' },
     { name: 'JWT Auth', icon: Shield, experience: '3+ yrs', level: 85, color: 'from-purple-400 to-purple-600' },
   ]
@@ -49,7 +50,7 @@ const Skills = () => {
     },
     {
       title: '💻 Additional Skills',
-      skills: skills.slice(8, 12)
+      skills: skills.slice(8, 13)
     }
   ]
 

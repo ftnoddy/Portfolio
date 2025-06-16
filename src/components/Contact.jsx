@@ -60,15 +60,15 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'atindra.mohan@email.com',
-      link: 'mailto:atindra.mohan@email.com',
+      value: 'atindramohandas353@gmail.com',
+      link: 'mailto:atindramohandas353@gmail.com',
       description: 'Send me an email anytime!'
     },
     {
       icon: Phone,
       title: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 7477592029',
+      link: 'tel:+917477592029',
       description: 'Call me for urgent matters'
     },
     {
@@ -84,14 +84,14 @@ const Contact = () => {
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/atindramohan',
+      url: 'https://www.linkedin.com/in/atindra-mohan-das-6128ab1b4/',
       color: 'from-blue-500 to-blue-700',
       followers: '500+'
     },
     {
       icon: GitHub,
       name: 'GitHub',
-      url: 'https://github.com/atindramohan',
+      url: 'https://github.com/ftnoddy',
       color: 'from-gray-700 to-gray-900',
       followers: '200+'
     },
@@ -247,9 +247,9 @@ const Contact = () => {
                         <div className="bg-gradient-to-r from-cyan-400 to-blue-600 rounded-full p-3 group-hover:scale-110 transition-transform duration-300">
                           <IconComponent className="w-5 h-5 text-white" />
                         </div>
-                        <div className="flex-1">
+                        <div className="flex-1 min-w-0">
                           <h4 className="font-semibold text-slate-800 dark:text-slate-200">{info.title}</h4>
-                          <p className="text-cyan-600 dark:text-cyan-400 font-medium">{info.value}</p>
+                          <p className="text-cyan-600 dark:text-cyan-400 font-medium break-words overflow-hidden">{info.value}</p>
                           <p className="text-sm text-slate-500 dark:text-slate-400">{info.description}</p>
                         </div>
                       </a>
