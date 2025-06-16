@@ -200,7 +200,7 @@ const Projects = () => {
         {/* View More Projects Button */}
         <div className="text-center mt-12">
           <a 
-            href="https://github.com/atindramohan" 
+            href="https://github.com/ftnoddy" 
             target="_blank" 
             rel="noopener"
             className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-slate-800 to-slate-900 dark:from-slate-700 dark:to-slate-800 text-white font-semibold rounded-xl hover:shadow-xl transition-all duration-300 transform hover:scale-105"
