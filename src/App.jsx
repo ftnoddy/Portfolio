@@ -6,6 +6,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Chatbot from './components/Chatbot'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false)
@@ -43,6 +44,7 @@ function App() {
       <Experience />
       <Contact />
       <Footer />
+      <Chatbot />
     </div>
   )
 }

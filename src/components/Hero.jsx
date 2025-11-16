@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { FileText, Mail, Terminal } from 'react-feather'
-import profilePhoto from '../assets/WhatsApp Image 2025-06-12 at 18.28.48.jpeg'
+import profilePhoto from '../assets/my_portfolio_img.jpeg'
 import resumePDF from '../assets/AtindraMohanDasResume.pdf'
+import BackgroundRipple from './ui/BackgroundRipple'
+import { TypewriterEffectSmooth } from './ui/TypewriterEffect'
 
 const Hero = () => {
   const heroRef = useRef(null)
@@ -38,13 +40,14 @@ const Hero = () => {
   }
 
   return (
-    <section id="about" className="bg-circuit min-h-[80vh] flex items-center relative overflow-hidden">
-      {/* Enhanced background elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-10 w-20 h-20 bg-cyan-400/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-blue-400/10 rounded-full blur-2xl animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-cyan-300/15 rounded-full blur-lg animate-pulse delay-2000"></div>
-      </div>
+    <section id="about" className="min-h-[80vh] flex items-center relative overflow-hidden bg-white dark:bg-slate-900">
+      {/* Background Ripple Effect */}
+      <BackgroundRipple 
+        rows={8}
+        cols={27}
+        cellSize={56}
+        className="z-0"
+      />
       
       <div className="container mx-auto px-4 py-16 flex flex-col-reverse md:flex-row gap-10 md:gap-16 items-center relative z-10">
         <div ref={heroRef} className="w-full md:w-2/3 fade-in">
@@ -54,16 +57,37 @@ const Hero = () => {
             </span>
           </div>
           
-          <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 tracking-tight">
-            Hi, I'm{' '}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent animate-pulse">
-              Atindra Mohan
-            </span>
-          </h1>
+          <div className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 tracking-tight">
+            <TypewriterEffectSmooth
+              words={[
+                { text: "Hi,", className: "text-purple-500 dark:text-purple-400" },
+                { text: "I'm", className: "text-pink-500 dark:text-pink-400" },
+                { 
+                  text: "Atindra", 
+                  className: "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" 
+                },
+                { 
+                  text: "Mohan", 
+                  className: "bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent" 
+                },
+              ]}
+              className="flex flex-wrap justify-start"
+              cursorClassName="bg-gradient-to-r from-cyan-400 to-pink-500"
+            />
+          </div>
           
-          <h2 className="text-xl sm:text-2xl lg:text-3xl mb-3 font-semibold text-slate-700 dark:text-slate-300">
-            🚀 Backend Software Developer
-          </h2>
+          <div className="text-xl sm:text-2xl lg:text-3xl mb-3 font-semibold">
+            <TypewriterEffectSmooth
+              words={[
+                { text: "🚀", className: "text-yellow-500 dark:text-yellow-400" },
+                { text: "Backend", className: "text-green-500 dark:text-green-400" },
+                { text: "Software", className: "text-blue-500 dark:text-blue-400" },
+                { text: "Developer", className: "bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" },
+              ]}
+              className="flex flex-wrap justify-start"
+              cursorClassName="bg-gradient-to-r from-cyan-400 to-pink-500"
+            />
+          </div>
           
           <p className="text-base sm:text-lg lg:text-xl mb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
             Crafting scalable APIs and backend systems with <span className="text-green-600 font-semibold">Node.js</span> & <span className="text-green-600 font-semibold">MongoDB</span>. 

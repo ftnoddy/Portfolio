@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { GitHub, ExternalLink, Star, GitBranch, Eye } from 'react-feather'
+import ilyfImage from '../assets/ilyf.png'
+import damImage from '../assets/dam_ilyf.jpg'
 
 const Projects = () => {
   const projectsRef = useRef(null)
@@ -24,6 +26,30 @@ const Projects = () => {
   }, [])
 
   const projects = [
+    {
+      title: 'International Lingayat Youth Forum (ILYF)',
+      description: 'Full-stack website for International Lingayat Youth Forum - a complete web platform built from scratch with custom frontend and backend. Features responsive design, user management, and dynamic content management.',
+      technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'REST API', 'Responsive Design'],
+      githubLink: '#',
+      liveLink: 'https://ilyf.co.in',
+      stars: 0,
+      forks: 0,
+      status: 'Completed',
+      category: 'Full-Stack Web App',
+      image: ilyfImage,
+    },
+    {
+      title: 'Digital Asset Management (DAM) System',
+      description: 'Cloud-based Digital Asset Management system for organizing, storing, and managing digital files with granular access controls. Features AWS S3 multi-bucket architecture, custom ACL system with role-based permissions (READ_ONLY, READ_WRITE, DELETE, FULL_ACCESS), real-time file preview, folder hierarchy management, and comprehensive audit logging.',
+      technologies: ['AWS S3', 'Node.js/TypeScript', 'React', 'MongoDB', 'AWS Secrets Manager', 'ACL System'],
+      githubLink: '#',
+      liveLink: 'https://dam.ilyf.co.in',
+      stars: 0,
+      forks: 0,
+      status: 'Completed',
+      category: 'Cloud Storage System',
+      image: damImage,
+    },
     {
       title: 'E-Commerce API Platform',
       description: 'Robust REST API backend for an e-commerce platform with advanced features like product filtering, order management, payment integration, and real-time inventory tracking.',
@@ -154,16 +180,22 @@ const Projects = () => {
                 </p>
                 
                 {/* GitHub Stats */}
-                <div className="flex items-center gap-4 mb-4 text-sm text-slate-500 dark:text-slate-400">
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4" />
-                    <span>{project.stars}</span>
+                {(project.stars > 0 || project.forks > 0) && (
+                  <div className="flex items-center gap-4 mb-4 text-sm text-slate-500 dark:text-slate-400">
+                    {project.stars > 0 && (
+                      <div className="flex items-center gap-1">
+                        <Star className="w-4 h-4" />
+                        <span>{project.stars}</span>
+                      </div>
+                    )}
+                    {project.forks > 0 && (
+                      <div className="flex items-center gap-1">
+                        <GitBranch className="w-4 h-4" />
+                        <span>{project.forks}</span>
+                      </div>
+                    )}
                   </div>
-                  <div className="flex items-center gap-1">
-                    <GitBranch className="w-4 h-4" />
-                    <span>{project.forks}</span>
-                  </div>
-                </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
@@ -177,20 +209,28 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <a 
-                    href={project.githubLink}
-                    className="group/btn flex-1 inline-flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 font-semibold py-2 px-4 rounded-lg border border-slate-300 dark:border-slate-600 hover:border-cyan-400 transition-all duration-300"
-                  >
-                    <GitHub className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" /> 
-                    Code
-                  </a>
-                  <a 
-                    href={project.liveLink}
-                    className="group/btn flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
-                  >
-                    <ExternalLink className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" /> 
-                    Demo
-                  </a>
+                  {project.githubLink !== '#' && (
+                    <a 
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn flex-1 inline-flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 font-semibold py-2 px-4 rounded-lg border border-slate-300 dark:border-slate-600 hover:border-cyan-400 transition-all duration-300"
+                    >
+                      <GitHub className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" /> 
+                      Code
+                    </a>
+                  )}
+                  {project.liveLink !== '#' && (
+                    <a 
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    >
+                      <ExternalLink className="w-4 h-4 group-hover/btn:rotate-12 transition-transform" /> 
+                      Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
